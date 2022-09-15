@@ -1,4 +1,5 @@
 function Person({person}) {
+    console.log(person);
     return (
         <>
             <h1>{person.name}</h1>
@@ -8,4 +9,4 @@ function Person({person}) {
     )
 }
 
-export default Person;{person}
+export default Person;

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Person from '../components/Person';
 
 function People(props) {
     const [people, setPeople] = useState(null);
@@ -36,10 +37,9 @@ function People(props) {
         <>
             {people ? people.map((person, idx) => {
                 return (
-                    <>
-                        <h1>{person.name}</h1>
-                        <img src={person.image} alt={person.name} />
-                    </>
+                    <div key={idx}>
+                        <Person person={person} />
+                    </div>
                 )
             }) : <h1>Loading...</h1>}
         </>
